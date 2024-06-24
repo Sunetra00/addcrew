@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: addcrew
-          image: 265083127752.dkr.ecr.ap-south-1.amazonaws.com/ecr-docker-repo-name:latest
+          image: 265083127752.dkr.ecr.ap-south-1.amazonaws.com/ecr-add-crew-repo:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
