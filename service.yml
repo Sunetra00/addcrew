@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: addcrew-svc
+  name: addcrew
   namespace: eksapp
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: alb
-    service.beta.kubernetes.io/aws-load-balancer-internal: "false"
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
     service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
 spec:
   type: LoadBalancer
@@ -14,4 +14,4 @@ spec:
       port: 80
       targetPort: 8080
   selector:
-    app: addcrew-svc
+    app: addcrew
