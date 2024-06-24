@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: addcrew
+  namespace: eksapp
+  labels:
+    app: addcrew
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: addcrew
+  template:
+    metadata:
+      labels:
+        app: addcrew
+    spec:
+      containers:
+        - name: addcrew
+          image: 265083127752.dkr.ecr.ap-south-1.amazonaws.com/ecr-docker-repo-name:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
