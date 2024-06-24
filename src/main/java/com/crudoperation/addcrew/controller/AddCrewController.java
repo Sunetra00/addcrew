@@ -23,7 +23,7 @@ public class AddCrewController {
 
     @Autowired
     ObjectMapper mapper;
-    String url = "http://localhost:8090/ddboperation";
+    String url = "http://dynamodbupdater/ddboperation";
 
 
     @PostMapping("/addCrew")
